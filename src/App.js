@@ -4,7 +4,7 @@ import Demo2 from './demo2';
 import Demo3 from './demo3';
 import Demo4 from './demo4';
 
-const demos = [Demo1, Demo2, Demo3, Demo4]
+const demos = [{ c: Demo1, name: 'Demo1' }, { c: Demo2, name: 'Demo2' }, { c: Demo3, name: 'Demo3' }, { c: Demo4, name: 'Demo4' }]
 
 function App() {
   const [current, setActive] = useState(0);
@@ -28,7 +28,7 @@ function App() {
         </div>
         )}
       </div>
-      {demos[current] && React.createElement(demos[current])}
+      {demos[current] && React.createElement(demos[current].c)}
     </div>
   );
 }
